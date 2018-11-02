@@ -1,0 +1,36 @@
+---
+title: "Developing Data Product - Week2 Assignment"
+author: "Ankit Singhal"
+date: "November 2, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+India Gate - Delhi
+
+```{r loadinglib}
+library(leaflet)
+```
+
+## My Map
+
+You can also embed plots, for example:
+
+```{r MyMap, echo=TRUE}
+# initiate the leaflet instance and store it to a variable
+m = leaflet()
+    
+# we want to add map tiles so we use the addTiles() function - the default is openstreetmap
+m = addTiles(m)
+    
+# we can add markers by using the addMarkers() function
+m = addMarkers(m, lng=77.2295, lat=28.6129, popup="T")
+    
+# we can "run"/compile the map, by running the printing it
+m
+```
